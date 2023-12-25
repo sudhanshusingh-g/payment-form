@@ -1,40 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
-</head>
-<body>
-    <div class="horizontalBar">
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot">Payment</div>
-    </div>
-    <div class="card">
-        <div class="debitCard"></div>
-            <form>
-                <label>Name on Card</label><br>
-                <input type="text"><br>
-                <label for="">Card Number</label><br>
-                <input type="number" ><br>
-                <div class="together">
-                    <div class="valid">
-                <label >Valid Through</label>
-                <input type="number" name="" id="" placeholder="MM/YY">
-            </div>
-            <div class="cvv">
-                <label >CVV</label>
-                <input type="number">
-            </div>
-            </div>
-            </form>
-        
-    </div>
+  </head>
+  <body>
+    <main>
+      <div class="status">
+        <div class="bubble"></div>
+        <div class="line"></div>
+        <div class="bubble"></div>
+        <div class="line"></div>
+        <div class="bubble active"></div>
+        <p>Payment</p>
+      </div>
 
+      <div class="card">
+        <div class="debit"></div>
+        <form>
+          <label>Name</label><br />
+          <input type="text" /><br />
+          <label>Card Number</label><br />
+          <input type="number" /><br />
+          <label for="expiration-month">Valid Upto</label>
+          <div class="expiration-inputs">
+            <input
+              type="text"
+              id="expiration-month"
+              name="expiration-month"
+              maxlength="2"
+              style="width: 20%;"
+            />
+            <span class="separator">/</span>
+            <input
+              type="number"
+              id="expiration-year"
+              name="expiration-year"
+              maxlength="4"
+              style="width: 20%;"
+            />
+          </div>
 
+          <label>CVV</label>
+          <div class="cvv">
+            <input type="number" maxlength="3" style="width: 20%" />
+          </div>
+          <button class="paymentBtn "><i class="fa-solid fa-lock"></i>Pay</button>
+        </form>
+      </div>
+    </main>
 
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
+      integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"
+      integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="./script.js"></script>
-</body>
+  </body>
 </html>
